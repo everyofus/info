@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HDEF.INFO – Human Defence DAO</title>
+  <title>HDEF.INFO – Human Defence NEWS DAO</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <style>
+    html, body {
+      height: 100%;
+    }
     body {
       font-family: 'Arial', sans-serif;
       background-color: #0a0a0a;
       color: #f3f3f3;
+      margin: 0;
+      padding: 0;
     }
     .highlight {
       color: #edb20e;
@@ -42,25 +47,39 @@
       height: 32px;
       margin-left: auto;
     }
+    .update-tile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.2s;
+      text-decoration: none;
+      color: #f3f3f3;
+    }
+    .update-tile:hover {
+      background-color: #1a1a1a;
+    }
   </style>
 </head>
-<body class="p-6">
-  <header class="flex items-center justify-between mb-8">
+<body class="h-screen overflow-hidden">
+  <header class="flex items-center justify-between px-6 py-4">
     <div class="flex items-center space-x-4">
       <img src="img/logo.png" alt="Logo" class="h-10">
-      <div class="bg-[#edb20e] text-black font-bold px-3 py-2 text-xl">HDEF.INFO</div>
+      <div class="bg-[#edb20e] text-black font-bold px-3 py-2 text-xl">Alpha 0.1</div>
     </div>
     <a href="#" class="inline-flex items-center bg-[#edb20e] text-black font-bold px-3 py-2 rounded">
       <img src="img/donate_icon.png" alt="Donate" class="w-5 h-5 mr-2"> DONATE
     </a>
   </header>
 
-  <main class="grid grid-cols-4 gap-4">
+  <main class="grid grid-cols-4 gap-4 h-[calc(100vh-120px)] px-6 pb-6">
     <!-- Sidebar Menu -->
-    <aside class="col-span-1 space-y-4">
+    <aside class="col-span-1 space-y-4 overflow-y-auto">
       <a href="aicourses.html" class="menu-tile block">
         <img src="img/aicourses_icon.png" alt="AI Courses" class="menu-icon">
-        <div>STUDY!</div>
+        <div>COMING SUN</div>
       </a>
       <a href="news.html" class="menu-tile block">
         <img src="img/news_icon.png" alt="News" class="menu-icon">
@@ -68,7 +87,7 @@
       </a>
       <a href="actions.html" class="menu-tile block">
         <img src="img/importantactions_icon.png" alt="Actions" class="menu-icon">
-        <div>ACTIONS</div>
+        <div>COMING SUN</div>
       </a>
       <a href="whoweare.html" class="menu-tile block">
         <img src="img/whoweare_icon.png" alt="Who We Are" class="menu-icon">
@@ -77,38 +96,30 @@
     </aside>
 
     <!-- Right Side Feed -->
-    <section class="col-span-3 bg-gray-900 p-6 rounded">
-      <h2 class="text-3xl font-bold mb-4">Latest Updates</h2>
+    <section class="col-span-3 bg-gray-900 p-6 rounded overflow-y-auto">
+      <h2 class="text-3xl font-bold mb-4">Human Defence news feed</h2>
       <div class="space-y-4">
-        <div class="bg-black p-4 rounded flex justify-between items-center">
-          <div>
-            <p>New petition launched to support universal basic income.</p>
-          </div>
+        <a href="-" class="update-tile">
+          <p>New petition launched to support universal basic income.</p>
           <img src="img/importantactions_icon.png" alt="Petition Icon" class="post-tag-icon">
-        </div>
-        <div class="bg-black p-4 rounded flex justify-between items-center">
-          <div>
-            <p>This weekend in solidarity with political prisoners.You can write letter for emotional support. IMPORTANT. FREE. </p>
-          </div>
-          <img src="img/lettersprzn_icon.png" alt="Action Icon" class="post-tag-icon">
-        </div>
-        <div class="bg-black p-4 rounded flex justify-between items-center">
-          <div>
-            <p>New course on AI useful tools now available.</p>
-          </div>
+        </a>
+        <a href="letters.html" class="update-tile">
+          <p>This weekend in solidarity with prisoners. Letters for support.</p>
+          <img src="img/lettersimportantactions_icon.png" alt="Letters Icon" class="post-tag-icon">
+        </a>
+        <a href="course.html" class="update-tile">
+          <p>New course on AI resistance tools now available.</p>
           <img src="img/aicourses_icon.png" alt="Course Icon" class="post-tag-icon">
-        </div>
-        <div class="bg-black p-4 rounded flex justify-between items-center">
-          <div>
-            <p>New donat! 0,3 ETH From DAO partisipant @ser9978. tnx bro.</p>
-          </div>
+        </a>
+        <a href="donations.html" class="update-tile">
+          <p>New donation! 0.3 ETH from DAO participant @ser9978. Спасибо!</p>
           <img src="img/donate_icon.png" alt="Donation Icon" class="post-tag-icon">
-        </div>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="flex items-center justify-between mt-12 border-t border-gray-800 pt-4">
+  <footer class="flex items-center justify-between px-6 mt-4 border-t border-gray-800 pt-4">
     <div class="flex space-x-4 text-[#edb20e]">
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" class="w-6 h-6"></a>
     </div>
