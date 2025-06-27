@@ -5,21 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HDEF.INFO – Human Defence DAO</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <style>
-    <script>
-  const langs = ['en', 'es', 'ru'];
-  document.querySelectorAll('header a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const selected = link.textContent.toLowerCase();
-      langs.forEach(l => {
-        document.querySelectorAll(`.lang-${l}`).forEach(el => {
-          el.classList.toggle('hidden', l !== selected);
-        });
-      });
-    });
-  });
-</script>
     body {
       font-family: 'Arial', sans-serif;
       background-color: #0a0a0a;
@@ -36,6 +26,7 @@
 <body class="p-6">
   <header class="flex items-center justify-between mb-8">
     <div class="flex items-center space-x-4">
+      <img src="/img/logo.png" alt="Logo" class="h-10">
       <div class="bg-yellow-500 text-black font-bold px-3 py-2 text-xl">HDEF.INFO</div>
       <h1 class="text-2xl font-bold uppercase">HUMAN DEFENCE DAO</h1>
     </div>
@@ -46,103 +37,45 @@
     </div>
   </header>
 
-  <div class="bg-gray-900 p-4 rounded mb-8">
-    <input type="text" placeholder="he oggarichs very well" class="w-full p-2 bg-black text-white border border-gray-700 rounded">
-  </div>
-
   <main>
-    <section class="mb-10">
-      <h2 class="text-4xl font-extrabold mb-2">HUMAN DEFENCE DAO</h2>
-      <p class="text-lg mb-2">After all solo human arm.</p>
-      <a href="#" class="highlight font-bold">READ FULL MANIFESTO</a>
-    </section>
-
     <section class="grid grid-cols-2 gap-8 mb-12">
       <div>
-        <h3 class="text-2xl font-bold">NEWS / FACTS</h3>
-        <p>Global actions against tyranny. Share stories. Vote your truth.</p>
+        <h3 class="text-2xl font-bold">AI COURSES</h3>
+        <p>Learn about AI, privacy, crypto, and tools for resistance.</p>
       </div>
       <div class="card-img flex justify-center items-center">
-        <img src="a.png" alt="News Icon" class="w-20 h-20">
+        <img src="/img/aicourses_icon.png" alt="AI Courses Icon" class="w-20 h-20">
       </div>
+
       <div>
-        <h3 class="text-2xl font-bold">MANIFESTO / ACTIONS</h3>
-        <p>Educate yourself and others. Organize, act, and resist injust.</p>
+        <h3 class="text-2xl font-bold">NEWS</h3>
+        <p>Curated updates on global injustice and human defense.</p>
       </div>
       <div class="card-img flex justify-center items-center">
-        <img src="mail.png" alt="Actions Icon" class="w-20 h-20">
+        <img src="/img/news_icon.png" alt="News Icon" class="w-20 h-20">
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold">IMPORTANT ACTIONS</h3>
+        <p>Petitions, campaigns and urgent collective responses.</p>
+      </div>
+      <div class="card-img flex justify-center items-center">
+        <img src="/img/importantactions_icon.png" alt="Actions Icon" class="w-20 h-20">
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold">WHO WE ARE</h3>
+        <p>Read about the people behind HDEF and our mission.</p>
+      </div>
+      <div class="card-img flex justify-center items-center">
+        <img src="/img/whoweare_icon.png" alt="Who We Are Icon" class="w-20 h-20">
       </div>
     </section>
-
-    <section class="grid grid-cols-2 gap-8 mb-12">
-      <div>
-        <h3 class="text-2xl font-bold">JOIN US</h3>
-        <p>Join our DAO and become part of the resistance to tyranny.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-bold">WRITE POLITICAL PRISONERS</h3>
-        <p>Send letters of support to the victims of political persecution.</p>
-      </div>
-    </section>
-    <section class="mb-12" id="about">
-  <h2 class="text-3xl font-bold mb-4">What is HDEF.INFO</h2>
-  
-  <!-- ENGLISH -->
-  <div class="lang-en">
-    <p class="mb-4">
-      <strong>HDEF.INFO</strong> is a control panel for humanity in the age of AI.<br>
-      It's a platform for coordination, reaction, and resistance — where news, manifestos, petitions, and letters to political prisoners are tools of action.
-    </p>
-    <ul class="list-disc list-inside mb-4">
-      <li>📡 Stay informed with curated news — noise-free, manipulation-free.</li>
-      <li>🧭 React with meaning — Important / Interesting / Neutral / Terrifying.</li>
-      <li>📄 Read and expand the manifesto.</li>
-      <li>🗳️ Sign and spread petitions for UBI.</li>
-      <li>✉️ Write to political prisoners.</li>
-      <li>🤝 Join the DAO and defend human dignity together.</li>
-    </ul>
-  </div>
-
-  <!-- ESPAÑOL -->
-  <div class="lang-es hidden">
-    <p class="mb-4">
-      <strong>HDEF.INFO</strong> es un panel de control para la humanidad en la era de la IA.<br>
-      Una plataforma para coordinar, reaccionar y resistir — donde noticias, manifiestos, peticiones y cartas a presos políticos son herramientas de acción.
-    </p>
-    <ul class="list-disc list-inside mb-4">
-      <li>📡 Noticias seleccionadas — sin ruido, sin manipulación.</li>
-      <li>🧭 Reacciona: Importante / Interesante / Neutral / Terrorífico.</li>
-      <li>📄 Lee y amplía el manifiesto.</li>
-      <li>🗳️ Firma y difunde peticiones por la RBU.</li>
-      <li>✉️ Escribe a presos políticos.</li>
-      <li>🤝 Únete al DAO y defiende la dignidad humana.</li>
-    </ul>
-  </div>
-
-  <!-- РУССКИЙ -->
-  <div class="lang-ru hidden">
-    <p class="mb-4">
-      <strong>HDEF.INFO</strong> — это командный пульт человечества в эпоху ИИ.<br>
-      Это платформа координации, реакции и сопротивления, где новости, манифесты, петиции и письма заключённым — это инструменты действия.
-    </p>
-    <ul class="list-disc list-inside mb-4">
-      <li>📡 Новости без шума и манипуляций.</li>
-      <li>🧭 Реагируй: Важно / Интересно / Нейтрально / Ужасно.</li>
-      <li>📄 Читай и развивай манифест.</li>
-      <li>🗳️ Подписывай и распространяй петиции за ББД.</li>
-      <li>✉️ Пиши политзаключённым.</li>
-      <li>🤝 Присоединяйся к DAO и защищай человеческое достоинство.</li>
-    </ul>
-  </div>
-</section>
-
   </main>
 
   <footer class="flex items-center justify-between mt-12 border-t border-gray-800 pt-4">
     <div class="flex space-x-4 text-yellow-500">
-      <a href="#"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.897-.955-2.178-1.549-3.594-1.549-2.723 0-4.928 2.206-4.928 4.928 0 .39.045.765.127 1.124-4.094-.205-7.725-2.165-10.152-5.144-.424.722-.666 1.561-.666 2.475 0 1.708.869 3.216 2.188 4.099-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.828-.413.112-.849.171-1.296.171-.317 0-.626-.03-.928-.086.627 1.956 2.444 3.377 4.6 3.417-1.68 1.318-3.809 2.105-6.115 2.105-.398 0-.79-.023-1.177-.068 2.179 1.397 4.768 2.212 7.557 2.212 9.054 0 14-7.496 14-13.986 0-.21 0-.42-.015-.63.962-.695 1.8-1.562 2.46-2.549z"/></svg></a>
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" class="w-6 h-6"></a>
-      <a href="#"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg></a>
     </div>
     <div class="space-x-4 text-yellow-500">
       <a href="#">PRIVACY</a>
