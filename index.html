@@ -16,10 +16,31 @@
       color: #f3f3f3;
     }
     .highlight {
-      color: #facc15;
+      color: #edb20e;
     }
     .card-img {
-      background-color: #facc15;
+      background-color: #edb20e;
+    }
+    .menu-tile {
+      background-color: #edb20e;
+      color: #000;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .menu-tile:hover {
+      transform: scale(1.05);
+    }
+    .menu-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 0.5rem;
+    }
+    .post-tag-icon {
+      width: 32px;
+      height: 32px;
+      margin-left: auto;
     }
   </style>
 </head>
@@ -27,60 +48,71 @@
   <header class="flex items-center justify-between mb-8">
     <div class="flex items-center space-x-4">
       <img src="img/logo.png" alt="Logo" class="h-10">
-      <div class="bg-yellow-500 text-black font-bold px-3 py-2 text-xl">HDEF.INFO</div>
-      <h1 class="text-2xl font-bold uppercase">HUMAN DEFENCE DAO</h1>
+      <div class="bg-[#edb20e] text-black font-bold px-3 py-2 text-xl">HDEF.INFO</div>
     </div>
-    <div class="space-x-4 text-yellow-500 font-semibold">
-      <a href="#">EN</a>
-      <a href="#">ES</a>
-      <a href="#">RU</a>
-      <a href="#" class="inline-flex items-center bg-yellow-500 text-black font-bold px-3 py-2 rounded">
-        <img src="img/donate_icon.png" alt="Donate" class="w-5 h-5 mr-2"> DONATE
-      </a>
-    </div>
+    <a href="#" class="inline-flex items-center bg-[#edb20e] text-black font-bold px-3 py-2 rounded">
+      <img src="img/donate_icon.png" alt="Donate" class="w-5 h-5 mr-2"> DONATE
+    </a>
   </header>
 
-  <main>
-    <section class="grid grid-cols-2 gap-8 mb-12">
-      <div>
-        <h3 class="text-2xl font-bold">AI COURSES</h3>
-        <p>Learn about AI, privacy, crypto, and tools for resistance.</p>
-      </div>
-      <div class="card-img flex justify-center items-center">
-        <img src="img/aicourses_icon.png" alt="AI Courses Icon" class="w-20 h-20">
-      </div>
+  <main class="grid grid-cols-4 gap-4">
+    <!-- Sidebar Menu -->
+    <aside class="col-span-1 space-y-4">
+      <a href="aicourses.html" class="menu-tile block">
+        <img src="img/aicourses_icon.png" alt="AI Courses" class="menu-icon">
+        <div>STUDY!</div>
+      </a>
+      <a href="news.html" class="menu-tile block">
+        <img src="img/news_icon.png" alt="News" class="menu-icon">
+        <div>NEWS</div>
+      </a>
+      <a href="actions.html" class="menu-tile block">
+        <img src="img/importantactions_icon.png" alt="Actions" class="menu-icon">
+        <div>ACTIONS</div>
+      </a>
+      <a href="whoweare.html" class="menu-tile block">
+        <img src="img/whoweare_icon.png" alt="Who We Are" class="menu-icon">
+        <div>WHO WE ARE</div>
+      </a>
+    </aside>
 
-      <div>
-        <h3 class="text-2xl font-bold">NEWS</h3>
-        <p>Curated updates on global injustice and human defense.</p>
-      </div>
-      <div class="card-img flex justify-center items-center">
-        <img src="img/news_icon.png" alt="News Icon" class="w-20 h-20">
-      </div>
-
-      <div>
-        <h3 class="text-2xl font-bold">IMPORTANT ACTIONS</h3>
-        <p>Petitions, campaigns and urgent collective responses.</p>
-      </div>
-      <div class="card-img flex justify-center items-center">
-        <img src="img/importantactions_icon.png" alt="Actions Icon" class="w-20 h-20">
-      </div>
-
-      <div>
-        <h3 class="text-2xl font-bold">WHO WE ARE</h3>
-        <p>Read about the people behind HDEF and our mission.</p>
-      </div>
-      <div class="card-img flex justify-center items-center">
-        <img src="img/whoweare_icon.png" alt="Who We Are Icon" class="w-20 h-20">
+    <!-- Right Side Feed -->
+    <section class="col-span-3 bg-gray-900 p-6 rounded">
+      <h2 class="text-3xl font-bold mb-4">Latest Updates</h2>
+      <div class="space-y-4">
+        <div class="bg-black p-4 rounded flex justify-between items-center">
+          <div>
+            <p>New petition launched to support universal basic income.</p>
+          </div>
+          <img src="img/importantactions_icon.png" alt="Petition Icon" class="post-tag-icon">
+        </div>
+        <div class="bg-black p-4 rounded flex justify-between items-center">
+          <div>
+            <p>Urgent protest this weekend in solidarity with prisoners.</p>
+          </div>
+          <img src="img/importantactions_icon.png" alt="Action Icon" class="post-tag-icon">
+        </div>
+        <div class="bg-black p-4 rounded flex justify-between items-center">
+          <div>
+            <p>New course on AI resistance tools now available.</p>
+          </div>
+          <img src="img/aicourses_icon.png" alt="Course Icon" class="post-tag-icon">
+        </div>
+        <div class="bg-black p-4 rounded flex justify-between items-center">
+          <div>
+            <p>Support needed to deliver aid packages this month.</p>
+          </div>
+          <img src="img/donate_icon.png" alt="Donation Icon" class="post-tag-icon">
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="flex items-center justify-between mt-12 border-t border-gray-800 pt-4">
-    <div class="flex space-x-4 text-yellow-500">
+    <div class="flex space-x-4 text-[#edb20e]">
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" class="w-6 h-6"></a>
     </div>
-    <div class="space-x-4 text-yellow-500">
+    <div class="space-x-4 text-[#edb20e]">
       <a href="#">PRIVACY</a>
       <a href="#">CONTACT</a>
     </div>
